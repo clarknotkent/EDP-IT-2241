@@ -1,0 +1,15 @@
+{
+  "name": "mini-addu-sis-milestone-1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Archived coursework \u2014 IT 2241 Event-Driven Programming, Milestone 1 (March 2024)",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/verify.mjs",
+    "serve": "python3 -m http.server 8000",
+    "shots": "node tests/screenshot.mjs .screenshots index.html pages/submit-grades.html pages/course-list.html"
+  },
+  "devDependencies": {
+    "playwright": "1.56.0"
+  }
+}

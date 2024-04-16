@@ -1,0 +1,37 @@
+/* Milestone 1 — styles extracted from inline `style` attributes.
+   157 of them across three pages, collapsed to the rules below. The
+   markup itself is unchanged apart from swapping each attribute for the
+   matching class. Loaded after the vendor stylesheets so it wins where
+   the inline declaration used to. */
+
+/* Grade-encoding rows: the grey banding on every data cell */
+.cell-shaded { background-color: #ddd; }
+
+/* A grade not yet verified, or unavailable — grey italic, centred */
+.grade-pending { font-style: italic; color: #6E6868; text-align: center; }
+
+.center { text-align: center; }
+
+/* Section codes and schedule strings under a subject title */
+.meta { font-size: 10px; }
+
+.col-head { background-color: #656565; color: white; }
+
+.grade-note { font-style: italic; color: #6E6868; }
+
+/* The two evaluation icons in the legend list */
+.legend-icon { vertical-align: bottom; }
+
+/* Hidden leftover from Drupal's sticky-table script in the scraped markup */
+.sticky-ghost { position: fixed; top: 0px; left: 158.047px; visibility: hidden; }
+
+.right { text-align: right; }
+
+.grade-failed { font-weight: bold; color: red; }
+
+.grade-passed { font-weight: bold; }
+
+.legend-gap { margin-bottom: 4px; }
+
+/* Nudge on the 'View Student Grades' button */
+.btn-offset { margin-left: 3px; position: relative; top: 10px; }
