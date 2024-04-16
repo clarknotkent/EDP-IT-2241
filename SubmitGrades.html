@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STUDENT INFORMATION SYSTEM</title>
+        <link rel="Stylesheet" href="ViewGrades1.css"/>
+        <link rel="Stylesheet" href="ViewGrades2.css"/>
+        <link rel="Stylesheet" href="ViewGrades3.css"/>
+        <link rel="Stylesheet" href="ViewGrades4.css"/>
+        <link rel="Stylesheet" href="ViewGrades5.css"/>
+
+        
+
+    </head>
+    
+    <body>        
+        <div id="sis_container">
+            <!-- LEFT CONTAINER START -->
+            <div class="sis_container_left">
+                <div class="region region-sidebar-left">
+                    <div id="block-block-3" class="block block-block">
+                        <div id="block-system-navigation" class="block block-system block-menu">
+                            <div class="content">
+                                <ul class="menu">
+                                    <li class="first leaf"><a href="ViewGrades.html" title="">View Grades</a></li>
+                                    <li class="leaf active-trail"><a href="SubmitGrades.html" class="active-trail active">Submit Grades</a></li>
+                                    <li class="leaf"><a href="CourseList.html" title="">CourseList</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LEFT CONTAINER END -->
+            <!-- RIGHT CONTAINER START -->
+            <div class="sis_container_right">
+                <div id="content" class="column">
+                    <div class="section">
+
+                        <div class="tabs"></div>
+            
+                        <div class="region region-content">
+                            <div id="block-system-main" class="block block-system">
+                                <div class="content">
+                                    <form action="/grades/2/2023" method="post" id="view-grade-form" accept-charset="UTF-8">
+                                        <h5> Class list</h5>
+                                        <table class="gray">
+                                            <tr>
+                                                <th>Code/Subject:</th>
+                                                <td>EVENT DRIVEN PROGRAMMING</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Schedule :</th>
+                                                <td>*2:05P-4:35P F610 TTh*</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Academic Period:</th>
+                                                <td>2nd Semester 2023-2024</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Grading Period:</th>
+                                                <td>Midterm</td>
+                                            </tr>
+                                        </table>
+
+                                        <hr class="line">
+
+                                        <h3> Grade Encoding Guidelines</h3>
+
+                                        <ul>
+                                            <li>Grades in the NEW Grading System must be encoded as A,B+,B,C+,C,D,F,FD,WP.</li>
+                                            <li>Non FYDP Grades in the OLD Grading System must be from 65 to 100</li>
+                                            <li>FYDP Grades in the NEW Grading System must be encoded as A,B+,B,C+,C,D,F,FD,WP.</li>
+                                            <li>FYDP Grades in the OLD Grading System must be ecoded as<br>O - Outstanding, HS - Highly Satisfactory,S - Satisfactory,MS - Moderately Satisfactory,F - Fair,P - Poor.</li>
+                                            <li>NE Grades will not be accepted. Students who have not taken exams must be provided the minimum grade. After the exam has been taken, the teacher should file a grade correction form at the<br>Registrar's Office.</li>
+                                            <li>Select AUD for Audit students.</li>
+                                        </ul>
+
+                                        <hr class="line">
+                                    
+                                        <table class="gray">
+                                            <tr>
+                                                <th style="background-color: #656565; color: white;">CODE</th>
+                                                <th style="background-color: #656565; color: white;">STUDENT NAME</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">FINAL</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">GRD. TYPE</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">YEAR LVL</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">ACAD. STATUS</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">YR. OF ENTRY</th>
+                                                <th style="background-color: #656565; color: white; text-align: center;">ENTRY YR. LVL</th>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">4518474</td>
+                                                <td style="background-color:#ddd">FAVIS, MARVIN</td>
+                                                <td style="background-color:#ddd"> 
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">131313</td>
+                                                <td style="background-color:#ddd">TRADES, TORI</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">141414</td>
+                                                <td style="background-color:#ddd">GROWERS, MONEY</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">151515</td>
+                                                <td style="background-color:#ddd">ICT, PALADIN</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">161616</td>
+                                                <td style="background-color:#ddd">BUTEN, MASTER</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">171717</td>
+                                                <td style="background-color:#ddd">ICT, MICHAEL</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">181818</td>
+                                                <td style="background-color:#ddd">TAN, CHINKEE</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">191919</td>
+                                                <td style="background-color:#ddd">TRADER, AMBITIOUS</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">202020</td>
+                                                <td style="background-color:#ddd">COLLINS, LEO</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="background-color:#ddd">212121</td>
+                                                <td style="background-color:#ddd">TALKS, RDR</td>
+                                                <td style="background-color:#ddd">
+                                                    <select>
+                                                        <option></option>
+                                                        <option>A</option>
+                                                        <option>B+</option>
+                                                        <option>C</option>
+                                                        <option>C+</option>
+                                                        <option>D</option>
+                                                        <option>F</option>
+                                                    </select>
+                                                </td>
+                                                <td style="background-color:#ddd">NEW</td>
+                                                <td style="background-color:#ddd">2</td>
+                                                <td style="background-color:#ddd">Regular</td>
+                                                <td style="background-color:#ddd">2022</td>
+                                                <td style="background-color:#ddd">1</td>
+                                            </tr>
+                                        </table>
+
+                                        <hr class="line">
+
+                                        <!-- <a href="ViewGrades.html" style="margin-left: 3px; position: relative; top: 10px;"><button class="blue-box">View Student Grades</button></a> -->
+
+                                        <br>                                     
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTAINER RIGHT -->
+            <div class="sis_clr_left" ></div>
+        </div>
+        <!-- END CONTAINER -->
+
+        <!-- START FOOTER -->
+        <div>
+            <div class="sis_footer"></div>
+            <div class="sis_footer_left"></div>
+            <div class="region region-footer-left"></div>
+            <div id="block-block-1" class="block block-block"></div>
+            <div class="sis_footer_right"></div>
+            <div class="region region-footer-right"></div>
+            <div id="block-block-2" class="block block-block"></div>
+            <div class="sis_clr_left"></div>
+        </div>
+        <!-- END FOOTER -->  
+        
+        <form id="autologout-cache-check">
+            <input type="hidden" id="autologout-cache-check-bit" value="0" />
+        </form>
+    </body>
+
+</html>
