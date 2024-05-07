@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STUDENT INFORMATION SYSTEM</title>
+        <link rel="stylesheet" href="../assets/css/vendor/sis-theme-1.css">
+        <link rel="stylesheet" href="../assets/css/vendor/sis-theme-2.css">
+        <link rel="stylesheet" href="../assets/css/vendor/sis-theme-3.css">
+        <link rel="stylesheet" href="../assets/css/vendor/sis-theme-4.css">
+        <link rel="stylesheet" href="../assets/css/vendor/sis-theme-5.css">
+        <link rel="stylesheet" href="../assets/css/app.css">
+        <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+</head>
+    
+    <body>
+        <div id="sis_container">
+            <!-- LEFT CONTAINER START -->
+            <div class="sis_container_left">
+                <div class="region region-sidebar-left">
+                    <div id="block-block-3" class="block block-block">
+                        <div id="block-system-navigation" class="block block-system block-menu">
+                            <div class="content">
+                                <ul class="menu">
+                                    <li class="first leaf"><a href="../index.html" title="">View Grades</a></li>
+                                    <li class="leaf active-trail"><a href="submit-grades.html" class="active-trail active">Submit Grades</a></li>
+                                    <li class="leaf"><a href="course-list.html" title="">CourseList</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LEFT CONTAINER END -->
+            <!-- RIGHT CONTAINER START -->
+            <div class="sis_container_right">
+                <div id="content" class="column">
+                    <div class="section">
+
+                        <h1 class="title" id="page-title">My Curriculum</h1>
+
+                        <div class="tabs"></div>
+                        
+                        <div class="region region-content">
+                            <div id="block-system-main" class="block block-system">
+                                <div class="content">
+                                    <form action="/curriculum" method="post" id="view-curriculum-form" accept-charset="UTF-8">
+                                        <div>
+                                            <table class="sticky-header sticky-ghost">
+                                                <thead>
+                                                    <tr>
+                                                        <th>YEAR LEVEL</th>
+                                                        <th>SEMESTER</th>
+                                                        <th>SUBJ. NO</th>
+                                                        <th>DESCRIPTIVE TITLE</th>
+                                                        <th>UNITS</th>
+                                                        <th>GRADE</th>
+                                                        <th>PREREQUISITE</th>
+                                                        <th>REMARKS</th> 
+                                                    </tr>
+                                                </thead>
+                                            </table>                                                 
+                                            
+                                            <table class="sticky-enabled tableheader-processed sticky-table">
+                                                <caption>MY CURRICULUM FOR BS-IT CURRICULUM YEAR 2019</caption>
+                                                <thead>
+                                                    <!-- Add Row -->                                                
+                                                    <tr>
+                                                        <th class="section-head">ADD STUDENT</th>
+                                                        <th>
+                                                            <button id="addRowButton" type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded center">Add Student</button>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><label for="ylvl">YEAR LEVEL</label></th>
+                                                        <th><label for="sem">SEMESTER</label></th>
+                                                        <th><label for="subno">SUBJ. NO</label></th>
+                                                        <th><label for="dtitle">DESCRIPTIVE TITLE</label></th>
+                                                        <th><label for="units">UNITS</label></th>
+                                                        <th><label for="grade">GRADE</label></th>
+                                                        <th><label for="prereq">PREREQUISITE</label></th>
+                                                        <th><label for="remarks">REMARKS</label></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><input class="w-xs" type="text" id="ylvl" required></th>                                                
+                                                        <th><input class="w-md" type="text" id="sem" required></th>                                
+                                                        <th><input class="w-sm" type="text" id="subno" required></th>                              
+                                                        <th><input class="w-lg" type="text" id="dtitle" required></th>
+                                                        <th><input class="w-sm" type="text" id="units" required></th>
+                                                        <th><input class="w-sm" type="text" id="grade" required></th>
+                                                        <th><input class="w-md" type="text" id="prereq" required></th>
+                                                        <th><input class="w-sm" type="text" id="remarks" required></th>
+                                                    </tr>                                                    
+                                                    <!-- Search Row -->
+                                                    <tr>
+                                                        <th class="section-head">SEARCH BAR</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>YEAR LEVEL</th>
+                                                        <th>SEMESTER</th>
+                                                        <th>SUBJ. NO</th>
+                                                        <th>DESCRIPTIVE TITLE</th>
+                                                        <th>UNITS</th>
+                                                        <th>GRADE</th>
+                                                        <th>PREREQUISITE</th>
+                                                        <th>REMARKS</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><input class="w-xs" type="text" id="search-ylvl"></th>
+                                                        <th><input class="w-md" type="text" id="search-sem"></th>                                                
+                                                        <th><input class="w-sm" type="text" id="search-subno"></th>
+                                                        <th><input class="w-lg" type="text" id="search-dtitle"></th>
+                                                        <th><input class="w-sm" type="text" id="search-units"></th>
+                                                        <th><input class="w-sm" type="text" id="search-grade"></th>
+                                                        <th><input class="w-md" type="text" id="search-prereq"></th>
+                                                        <th><input class="w-sm" type="text" id="search-remarks"></th>
+                                                    </tr>
+                                                    <!-- Data Row -->
+                                                    <tr>
+                                                        <th>YEAR LEVEL</th>
+                                                        <th>SEMESTER</th>
+                                                        <th>SUBJ. NO</th>
+                                                        <th>DESCRIPTIVE TITLE</th>
+                                                        <th>UNITS</th>
+                                                        <th>GRADE</th>
+                                                        <th>PREREQUISITE</th>
+                                                        <th>REMARKS</th>
+                                                    </tr>
+                                                </thead>
+                                                <!-- Courses -->
+                                                <tbody id="tableBody">
+                                                    <tr class="odd">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>Philo 1000</td>
+                                                        <td>PHILOSOPHY</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>ASF 1102</td>
+                                                        <td>NATIONAL SERVICE TRAINING PROGRAM - CIVIC WELFARE TRAINING SERVICE 1</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>ASF 1000</td>
+                                                        <td>ARRUPE SOCIAL FORMATION 0</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>ASF 1101</td>
+                                                        <td>ARRUPE SOCIAL FORMATION 1</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>GE 1105</td>
+                                                        <td>UNDERSTANDING THE SELF</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>GE 1106</td>
+                                                        <td>PURPOSIVE COMMUNICATION</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>GE 1108</td>
+                                                        <td>MATHEMATICS IN THE MODERN WORLD</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>PE 1114</td>
+                                                        <td>PATH-FIT I</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>CS 1130</td>
+                                                        <td>INTRODUCTION TO COMPUTING</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>1st Yr.</td>
+                                                        <td>1st Semester</td>
+                                                        <td>CS 1131</td>
+                                                        <td>COMPUTER PROGRAMMING 1</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!-- Courses -->
+                                                </tbody>
+                                            </table>
+
+                                            <input type="hidden" name="form_build_id" value="REDACTED">
+                                            <input type="hidden" name="form_token" value="REDACTED">
+                                            <input type="hidden" name="form_id" value="view_curriculum_form">
+
+                                        </div>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTAINER RIGHT -->
+            <div class="sis_clr_left" ></div>
+        </div>
+        <!-- END CONTAINER -->
+
+        <!-- START FOOTER -->
+        <div>
+            <div class="sis_footer"></div>
+            <div class="sis_footer_left"></div>
+            <div class="region region-footer-left"></div>
+            <div id="block-block-1" class="block block-block"></div>
+            <div class="sis_footer_right"></div>
+            <div class="region region-footer-right"></div>
+            <div id="block-block-2" class="block block-block"></div>
+            <div class="sis_clr_left"></div>
+        </div>
+        <!-- END FOOTER -->  
+        
+        <form id="autologout-cache-check">
+            <input type="hidden" id="autologout-cache-check-bit" value="0" />
+        </form>
+        <script src="../assets/js/course-list.js"></script>
+</body>
+
+</html>

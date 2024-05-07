@@ -1,0 +1,28 @@
+# ---- Node -------------------------------------------------------------
+# Only needed to run the test suite (Playwright). The pages themselves have
+# no build step: open index.html and they work.
+node_modules/
+package-lock.json
+
+# Output of `npm run shots` — full-page renders used to diff visual changes.
+.screenshots/
+
+# ---- Left behind by switching branches --------------------------------
+# Untracked files survive a checkout, so artefacts from main's Django app can
+# land here. Ignoring them stops a stray `git add -A` committing them.
+__pycache__/
+*.py[cod]
+db.sqlite3
+.venv/
+staticfiles/
+
+# ---- OS ---------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---- Editors ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
