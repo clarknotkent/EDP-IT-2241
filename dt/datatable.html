@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTable</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css">
+    <style>
+        /* Additional CSS styles if needed */
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        
+        <!-- Form -->
+        <form id="myForm" class="mb-4">
+            <div class="mb-4">
+                <label for="code" class="block font-bold mb-1">CODE</label>
+                <input type="text" id="code" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+                
+                <label for="sname" class="block font-bold mb-1">STUDENT NAME</label>
+                <input type="text" id="sname" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+                <label for="final" class="block font-bold mb-1">FINAL:</label>
+                <select id="final" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+                    <option value=" "></option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+
+                <label for="gtype" class="block font-bold mb-1">GRD. TYPE</label>
+                <input type="text" id="gtype" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+                <label for="ylvl" class="block font-bold mb-1">YEAR LVL</label>
+                <input type="text" id="ylvl" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+                <label for="astatus" class="block font-bold mb-1">ACAD. STATUS</label>
+                <input type="text" id="astatus" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+                <label for="yentry" class="block font-bold mb-1">YR. OF ENTRY</label>
+                <input type="text" id="yentry" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+                <label for="elvl" class="block font-bold mb-1">ENTRY YR. LVL</label>
+                <input type="text" id="elvl" class="border border-gray-300 px-2 py-1 rounded w-48" required>
+
+            </div>
+
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Student</button>
+        </form>
+        
+        <!-- Table -->
+        <table id="myTable" class="border border-gray-300 w-full">
+            <thead>
+                <tr>
+                    <th class="border border-gray-300 px-4 py-2">CODE</th>
+                    <th class="border border-gray-300 px-4 py-2">STUDENT NAME</th>
+                    <th class="border border-gray-300 px-4 py-2">FINAL</th>
+                    <th class="border border-gray-300 px-4 py-2">GRD. TYPE</th>
+                    <th class="border border-gray-300 px-4 py-2">YEAR LVL</th>
+                    <th class="border border-gray-300 px-4 py-2">ACAD. STATUS</th>
+                    <th class="border border-gray-300 px-4 py-2">YR. OF ENTRY</th>
+                    <th class="border border-gray-300 px-4 py-2">ENTRY YR. LVL</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        
+        <!-- Search Mechanism -->
+        <div class="mt-4">
+            <label for="search" class="block font-bold mb-1">Search:</label>
+            <input type="text" id="search" class="border border-gray-300 px-2 py-1 rounded" placeholder="Search by Full Name">
+        </div>
+        <div class="mt-4">
+            <label class="block font-bold mb-1">Gender:</label>
+            <label class="inline-flex items-center">
+                <input type="radio" name="filterGender" value="all" checked>
+                <span class="ml-2">All</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input type="radio" name="filterGender" value="male">
+                <span class="ml-2">Male</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input type="radio" name="filterGender" value="female">
+                <span class="ml-2">Female</span>
+            </label>
+        </div>
+        <div class="mt-4">
+            <label class="block font-bold mb-1">Position:</label>
+            <label class="inline-flex items-center">
+                <input type="radio" name="filterPosition" value="all" checked>
+                <span class="ml-2">All</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input type="radio" name="filterPosition" value="teacher">
+                <span class="ml-2">Teacher</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input type="radio" name="filterPosition" value="student">
+                <span class="ml-2">Student</span>
+            </label>
+        </div>
+        <div class="mt-4">
+            <label for="minAge" class="block font-bold mb-1">Minimum Age:</label>
+            <input type="number" id="minAge" class="border border-gray-300 px-2 py-1 rounded" min="0">
+        </div>
+    </div>
+
+    <script src="datatable.js"></script>
+</body>
+</html>
+
+

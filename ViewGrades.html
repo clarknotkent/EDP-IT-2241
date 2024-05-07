@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>STUDENT INFORMATION SYSTEM</title>
+      <link rel="Stylesheet" href="ViewGrades1.css"/>
+      <link rel="Stylesheet" href="ViewGrades2.css"/>
+      <link rel="Stylesheet" href="ViewGrades3.css"/>
+      <link rel="Stylesheet" href="ViewGrades4.css"/>
+      <link rel="Stylesheet" href="ViewGrades5.css"/>
+  </head>
+
+  <body>
+
+    <div id="sis_container">
+      <!-- LEFT CONTAINER START -->
+      <div class="sis_container_left">
+        <div class="region region-sidebar-left">
+          <div id="block-block-3" class="block block-block">
+
+          <div id="block-system-navigation" class="block block-system block-menu">
+              <div class="content">
+                <ul class="menu">
+                  <li class="first leaf"><a href="ViewGrades.html" title="">View Grades</a></li>
+                  <li class="leaf active-trail"><a href="SubmitGrades.html" class="active-trail active">Submit Grades</a></li>
+                  <li class="leaf"><a href="CourseList.html" title="">CourseList</a></li>
+                </ul>
+              </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- LEFT CONTAINER END -->
+
+      <!-- RIGHT CONTAINER START -->
+      <div class="sis_container_right">
+        <div id="content" class="column">
+          <div class="section">
+            <h1 class="title" id="page-title">My Grades</h1>
+  
+            <div class="tabs">
+            </div>
+  
+            <div class="region region-content">
+              <div id="block-system-main" class="block block-system">
+
+                <div class="content">
+                  <form action="/grades/2/2023" method="post" id="view-grade-form" accept-charset="UTF-8">
+                    <div>
+                      <table>
+                        <tr>
+                          <td width="13%"><strong>Code:</strong></td>
+                          <td>000000</td>
+                          <td width="15%"><strong>Course:</strong></td>
+                          <td width="20%">BS-IT</td>
+                          <td width="8%"><strong>Year:</strong></td>
+                          <td width="8%">2</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Student Name:</strong></td>
+                          <td>DELA CRUZ, JUAN PABLO  SANTOS</td>
+                          <td><strong>Division:</strong></td>
+                          <td>CS</td>
+                          <td><strong>Section:</strong></td>
+                          <td>InTec 2-A</td>
+                        </tr>
+                        <tr>
+                          <td><strong>RGC No:</strong></td>
+                          <td>00000000</td>
+                          <td><strong>Academic Period:</strong></td>
+                          <td>2nd Semester, 2023-2024</td>
+                          <td><strong>Status:</strong></td>
+                          <td>Regular</td>
+                        </tr> 	
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td><strong>Annual QPI:</td>
+                          <td>0.000</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </table>
+
+                      <hr/> <!-- LINE  -->
+
+                      <table class="sticky-enabled">
+                        <thead>
+                          <tr>
+                            <th>SUBJ NO.</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>
+                              <div style="text-align: center;">PRELIM</div>
+                            </th>
+                            <th>
+                              <div style="text-align: center;">MIDTERM</div>
+                            </th>
+                            <th>
+                              <div style="text-align: center;">PRE-FINAL</div>
+                            </th>
+                            <th width="70">
+                              <div style="text-align: center;">FINAL</div>
+                            </th>
+                            <th>
+                              <div style="text-align: center;">UNITS</div>
+                            </th>
+                            <th>
+                              <div style="text-align: center;">CREDIT TO</div>
+                            </th> 
+                          </tr>
+                        </thead>
+                        
+                        <tbody>
+                          <tr class="odd">
+                            <td>CS 2240 <br /><span style="font-size: 10px;">
+                              (4-111)</span>
+                            </td>
+                            <td>
+                              APPLICATIONS DEVELOPMENT AND EMERGING TECHNOLOGIES <br /><span style="font-size: 10px;">(* 12:25P-1:55P F610 TTh * 3:05P-5:05P F610 F * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/4-111" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>            
+                            </td>
+                          </tr>
+
+                          <tr class="even">
+                            <td>
+                              GE 1213 <br /><span style="font-size: 10px;">(16-228)</span>
+                            </td>
+                            <td>
+                              LIFE AND WORKS OF RIZAL <br /><span style="font-size: 10px;">(* 9:20A-10:50A F311 TTh * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/16-228" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>              
+                            </td>
+                          </tr>
+
+                          <tr class="odd">
+                            <td>
+                              GE 3219 <br /><span style="font-size: 10px;">(16-373)</span>
+                            </td>
+                            <td>
+                              ELECTIVE 2 <br /><span style="font-size: 10px;">(* 3:45P-5:15P F403 TTh * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/16-373" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>                
+                            </td>
+                          </tr>
+
+                          <tr class="even">
+                            <td>
+                              IT 2239 <br /><span style="font-size: 10px;">(4-107)</span>
+                            </td>
+                            <td>
+                              FUNDAMENTALS OF DATABASE SYSTEMS <br /><span style="font-size: 10px;">(* 9:50A-11:50A F605 F * 2:05P-3:35P F605 MW * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/4-107" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>                
+                            </td>
+                          </tr>
+
+                          <tr class="odd">
+                            <td>
+                              IT 2241 <br /><span style="font-size: 10px;">(4-113)</span>
+                            </td>
+                            <td>
+                              EVENT-DRIVEN PROGRAMMING <br /><span style="font-size: 10px;">(* 5:50P-8:20P F610 TTh * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/4-113" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>                
+                            </td>
+                          </tr>
+                          
+                          <tr class="even">
+                            <td>
+                              IT 2242 <br /><span style="font-size: 10px;">(4-109)</span>
+                            </td>
+                            <td>
+                              STATISTICS FOR RESEARCH <br /><span style="font-size: 10px;">(* 9:20A-10:50A D404 MW * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/4-109" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>                
+                            </td>
+                          </tr>
+                          
+                          <tr class="odd">
+                            <td>
+                              IT 2243 <br /><span style="font-size: 10px;">(4-105)</span>
+                            </td>
+                            <td>
+                              IT ELECTIVE 1 <br /><span style="font-size: 10px;">(* 12:25P-1:55P F612 MW * 1:00P-3:00P F612 F * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/4-105" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">3.00</div>
+                            </td>
+                            <td>
+
+                            </td> 
+                          </tr>
+
+                          <tr class="even">
+                            <td>
+                              PE 2217 <br /><span style="font-size: 10px;">(16-405)</span>
+                            </td>
+                            <td>
+                              PATH-FIT 4: TEAM SPORTS, GROUP EXERCISE AND RECREATIONAL ACTIVITIES <br /><span style="font-size: 10px;">(* 5:50P-7:50P M400A W * )</span>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <div style="font-style:italic;color:#6E6868;text-align: center;"></div>
+                            </td>
+                            <td>
+                              <a href="https://sis.addu.edu.ph/teacher_evaluation/16-405" class="eval_grade"><img title="Evaluate your instructor" src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" /></a>
+                            </td>
+                            <td>
+                              <div style="text-align: center;">2.00</div>
+                            </td>
+                            <td>
+
+                            </td>
+                          </tr>
+                          
+                          <tr class="odd">
+                            <td>
+                            </td>
+                            <td>
+                              <div style="text-align: right;"><strong>Quality Point Index (Q.P.I)<br />or Weighted Percentage Average (W.P.A) =</strong></div>
+                            </td>
+                            <td>
+                              <div style="text-align: center;"><strong></strong></div>
+                            </td>
+                            <td>
+                              <div style="text-align: center;"><strong></strong></div>
+                            </td>
+                            <td>
+                              <div style="text-align: center;"><strong></strong></div>
+                            </td>
+                            <td>
+                              <div style="text-align: center;"><strong>0</strong></div>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                          </tr>
+                      
+                      </table>
+                      
+                    <strong>Legend:</strong>
+                    <div>
+                      <ul>
+                        <li>
+                          <span style="font-style:italic;color:#6E6868;">n/a (not available)</span> - Please see finance office.
+                        </li>
+                        <li>
+                          <span style="font-style:italic;color:#6E6868;">GRADE</span> - Not yet verified
+                        </li>
+                        <li>
+                          <span style="font-weight:bold;color:red;">GRADE</span> - Failed
+                        </li>
+                        <li>
+                          <span style="font-weight:bold;">GRADE</span> - Passed
+                        </li>
+                        <li style="margin-bottom:4px">
+                          <img src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" height="15" style="vertical-align: bottom" /> - You have a pending lecture evaluation for this subject.
+                        </li>
+                        <li>
+                          <img src="https://sis.addu.edu.ph/sites/all/modules/accounts/images/laboratory.png" height="15" style="vertical-align: bottom" /> - You have a pending laboratory evaluation for this subject.
+                        </li>				  
+                      </ul>
+
+                      <hr />
+                      <a href="/print/grade/2/2023/1" class="print">
+                        Print 2nd Semester, 2023-2024 Grade
+                      </a>
+                      
+                      <div style="text-align: center;">
+                        <input type="submit" id="edit-prev-link" name="op" value="Previous Registration" class="form-submit" />
+                        <input type="hidden" name="next_semester" />
+                        <input type="hidden" name="next_schoolyear" />
+                        <input type="hidden" name="prev_semester" value="1" />
+                        <input type="hidden" name="prev_schoolyear" value="2023" />
+                        <input type="hidden" name="form_build_id" value="REDACTED" />
+                        <input type="hidden" name="form_token" value="REDACTED" />
+                        <input type="hidden" name="form_id" value="view_grade_form" />
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTAINER RIGHT -->
+
+      <div class="sis_clr_left" ></div>
+      
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- START FOOTER -->
+    <div>
+      <div class="sis_footer"></div>
+      <div class="sis_footer_left"></div>
+      <div class="region region-footer-left"></div>
+      <div id="block-block-1" class="block block-block"></div>
+      <div class="sis_footer_right"></div>
+      <div class="region region-footer-right"></div>
+      <div id="block-block-2" class="block block-block"></div>
+      <div class="sis_clr_left"></div>
+    </div>
+    <!-- END FOOTER -->  
+    
+    <form id="autologout-cache-check">
+      <input type="hidden" id="autologout-cache-check-bit" value="0" />
+    </form>
+
+  </body>
+
+  <tbody></tbody>
+
+</html>
