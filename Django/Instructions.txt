@@ -1,0 +1,9 @@
+Download python
+check if python is properly installed
+windows + r > cmd
+run: py --version
+run: python -m pip install Django
+go to project location
+example: cd Documents\Django\django1\
+run: py manage.py runserver
+

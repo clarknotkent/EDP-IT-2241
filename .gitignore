@@ -1,0 +1,37 @@
+# ---- Python -----------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- Django -----------------------------------------------------------
+# The database is local state, never shared. The 2024 submission committed
+# db.sqlite3 with real student names and three password hashes in it — which
+# is exactly why this file exists now and did not then.
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+/media/
+local_settings.py
+.env
+
+# ---- Left behind by switching branches --------------------------------
+# Untracked files survive a checkout, so running `npm install` on main and
+# then checking out this branch leaves node_modules/ sitting here, where a
+# careless `git add -A` would commit all 2,866 files of it.
+node_modules/
+package-lock.json
+.screenshots/
+
+# ---- OS ---------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---- Editors ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
