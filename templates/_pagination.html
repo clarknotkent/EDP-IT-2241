@@ -1,0 +1,28 @@
+{% comment %}
+Reads as the table's footer on desktop (the table frame drops its bottom border
+at md) and as its own block under the cards on mobile.
+{% endcomment %}
+{% if page.paginator.num_pages > 1 %}
+<nav class="mt-3 flex flex-wrap items-center justify-between gap-3 border border-slate-300 bg-slate-50 px-4 py-3 md:mt-0 dark:border-slate-800 dark:bg-slate-950" aria-label="Pagination">
+    <p class="text-sm text-slate-600 dark:text-slate-400">
+        Showing <span class="tabular-nums">{{ page.start_index }}–{{ page.end_index }}</span> of <span class="tabular-nums">{{ page.paginator.count }}</span>
+    </p>
+    <div class="flex items-center gap-2">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}{% if querystring %}&{{ querystring }}{% endif %}"
+               class="inline-flex h-9 items-center border border-slate-300 bg-white px-3 text-sm text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:ring-slate-300 dark:focus-visible:ring-offset-slate-950">Previous</a>
+        {% else %}
+            <span class="inline-flex h-9 items-center border border-slate-200 px-3 text-sm text-slate-400 dark:border-slate-800 dark:text-slate-600">Previous</span>
+        {% endif %}
+
+        <span class="px-1 text-sm text-slate-600 dark:text-slate-400">Page <span class="tabular-nums">{{ page.number }}</span> of <span class="tabular-nums">{{ page.paginator.num_pages }}</span></span>
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}{% if querystring %}&{{ querystring }}{% endif %}"
+               class="inline-flex h-9 items-center border border-slate-300 bg-white px-3 text-sm text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:ring-slate-300 dark:focus-visible:ring-offset-slate-950">Next</a>
+        {% else %}
+            <span class="inline-flex h-9 items-center border border-slate-200 px-3 text-sm text-slate-400 dark:border-slate-800 dark:text-slate-600">Next</span>
+        {% endif %}
+    </div>
+</nav>
+{% endif %}

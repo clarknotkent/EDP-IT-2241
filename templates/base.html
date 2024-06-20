@@ -1,0 +1,77 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System — {{ title }}</title>
+    {# Read the stored preference before first paint so dark mode never flashes light. #}
+    <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');</script>
+    <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+
+<a href="#main"
+   class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white focus:outline-none focus:ring-2 focus:ring-white">Skip to content</a>
+
+<div class="flex min-h-screen flex-col md:flex-row">
+
+    <aside class="w-full shrink-0 bg-slate-900 p-6 text-slate-200 md:w-72 md:border-r md:border-slate-800">
+        <div class="flex flex-col gap-2.5">
+            <p class="text-base font-semibold text-white">Student Records</p>
+            <div class="flex flex-col gap-1.5 text-sm text-slate-400">
+                {% if user.is_authenticated %}
+                    <p>Signed in as <span class="text-slate-200">{{ user.get_username }}</span></p>
+                    <div class="flex flex-wrap items-center gap-3.5">
+                        <form method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit"
+                                    class="text-sm text-slate-200 underline underline-offset-4 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">Sign out</button>
+                        </form>
+                        <a href="{% url 'password_change' %}"
+                           class="text-sm text-slate-400 underline underline-offset-4 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">Password</a>
+                        <button type="button" data-theme-toggle aria-pressed="false"
+                                class="inline-flex items-center gap-1.5 border border-slate-700 px-2 py-1 text-xs text-slate-400 hover:border-slate-500 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
+                            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+                            <span class="dark:hidden">Dark</span>
+                            <span class="hidden dark:inline">Light</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <p><a href="{% url 'login' %}" class="text-slate-200 underline underline-offset-4 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">Sign in</a> to view records</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% block sidebar %}{% endblock %}
+    </aside>
+
+    <main id="main" tabindex="-1" class="min-w-0 flex-1 p-6 md:p-8">
+        {% if messages %}
+            <ul class="mb-5 flex flex-col gap-2">
+                {% for message in messages %}
+                    <li role="status" class="flex items-start gap-2.5 border-l-4 px-3.5 py-2.5 text-sm {% if message.tags == 'error' %}border-red-700 bg-red-50 text-red-800 dark:border-red-500 dark:bg-red-950 dark:text-red-300{% else %}border-slate-900 bg-slate-100 text-slate-800 dark:border-slate-300 dark:bg-slate-900 dark:text-slate-200{% endif %}">
+                        <svg class="mt-0.5 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">{% if message.tags == 'error' %}<circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/>{% else %}<path d="M20 6 9 17l-5-5"/>{% endif %}</svg>
+                        <span>{{ message }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+
+{# Dark-mode toggle: one listener, no library. #}
+<script>
+document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-theme-toggle]');
+    if (!b) return;
+    var dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    b.setAttribute('aria-pressed', dark ? 'true' : 'false');
+});
+</script>
+</body>
+</html>

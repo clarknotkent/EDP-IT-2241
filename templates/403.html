@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex max-w-lg flex-col gap-3">
+    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Error 403</p>
+    <h2 class="text-xl font-semibold tracking-tight">Not allowed</h2>
+    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+        You don't have permission to do that. If you think you should, ask whoever
+        administers this system.
+    </p>
+    <a href="{% url 'students:list' %}" class="mt-1 inline-flex h-11 w-fit items-center justify-center bg-slate-900 px-4 text-sm font-medium text-white hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 md:h-10 dark:bg-slate-200 dark:text-slate-900 dark:hover:bg-white">Back to students</a>
+</div>
+{% endblock %}

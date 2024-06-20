@@ -1,0 +1,42 @@
+# ---- Python -----------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- Django -----------------------------------------------------------
+# The database is local state, never shared. The 2024 submission committed
+# db.sqlite3 with real student names and three password hashes in it.
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+/media/
+
+# Secrets. .env.example is the template and IS committed; .env is not.
+.env
+local_settings.py
+
+# ---- Tests / coverage -------------------------------------------------
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
+# ---- Node -------------------------------------------------------------
+# Only needed to rebuild static/css/app.css from static/src/app.css.
+# The built stylesheet IS committed, so a clone runs on pip alone.
+node_modules/
+package-lock.json
+
+# ---- OS ---------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# ---- Editors ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
